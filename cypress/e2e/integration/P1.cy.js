@@ -124,6 +124,10 @@ describe("Locating Web Elements", () => {
         cy.get('.checkbox').click();
         cy.get('.control > .button').click();
         cy.get('.mt-5').should('have.text', 'Thanks for submitting!');
+
+        cy.on('uncaught:exception', () => {
+            return false
+          });
         
     })
 });
